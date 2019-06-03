@@ -1,0 +1,41 @@
+package reynosojesus.ittepic.edu.tpdm_u5_practica1_jesusreynoso;
+
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class BaseDatos extends SQLiteOpenHelper {
+    public BaseDatos(Context c){
+        super(c,"respuestas",null,1);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase p1)
+    {
+        String c1="create table respuestas(signo varchar,ingles varchar,español varchar)";
+        p1.execSQL(c1);
+        p1.execSQL("insert into respuestas values('aries','from smelling fresh flowers to slowly chewing your food to really feeling someone’s tender touch. Keep your eyes as open as your heart while you go through your day, noting the vibrant colors and sounds that surround you. This can deepen awareness and “unprovoked happiness.” ','Aunque no consideramos que la imaginación sea una habilidad práctica, la gente pragmática comprende que se puede ganar mucho al pasar algún tiempo “sin hacer nada”')");
+        p1.execSQL("insert into respuestas values('tauro','Brick by brick, Taurus: That’s how you’ll build the roads and bridges that lead to whatever’s next for you. And if that’s still a mystery, don’t worry! You’re just baby steps into a much longer reinvention tour, which began on March 6, when trailblazing Uranus entered your sign for a seven-year adventure.','Asumimos que para hacernos amigos de alguien necesitamos tener muchas cosas en común con esa persona. Sin embargo, incluso en las relaciones armoniosas interviene cierta lucha. En las mejores, el poder va y viene dinámicamente.')");
+        p1.execSQL("insert into respuestas values('geminis','Gemini season has arrived at last! The Sun is invigorating your piece of the sky until June 21, inspiring you to reset your priorities and put your passions first.','¿Este mes deberías ser valiente o deberías ser cauta? Con estas excitantes energías astrológicas que están actuando sobre ti, hay innovación en el aire. Puede que incluso prefieras probar un planteamiento que esté en consonancia con una idea de cómo “deberían” ser las cosas. ')");
+        p1.execSQL("insert into respuestas values('cancer','You don’t have to suffer in silence, Crab—or alone! Caring, helpful people are all around you…but you have to poke out of your protective shell to see them! On Saturday, a compassionate coupling of the most kind-hearted planets, Venus and your ruler, the emo moon, in your community-centered eleventh house could help you reconnect to a few of the more important people in your life—not family or lovers but platonic friends who truly care about your well-being.','Tienes mucho por lo que estar agradecida. Sin embargo, dentro de poco tendrás aún más razones para sentir gratitud. No es como decir que, en el transcurso de junio, no vas a tener motivos para ¡estar hecha una furia! Tus problemas no están a punto de desaparecer en el horizonte.')");
+        p1.execSQL("insert into respuestas values('leo','the intuitive moon and creative Venus in your career corner, you might be mingling with movers and shakers and talking about potential collaborations.','No es fácil que te relajes y te eches a dormir cuando sabes que hay que hacer algo. Pero a veces la inactividad es mejor que la actividad y este mes vas a ganar más aguantándote el deseo de entrar en acción que saltando a la palestra. Para lograr esto vas a necesitar superar las críticas de los que prefieren que te lances a hacer algo.')");
+        p1.execSQL("insert into respuestas values('virgo','The world’s your oyster on Saturday, Virgo, so whatever you’re planning to do, make sure it’s anything BUT the same old same old. Under a sweet sync-up of the intuitive moon and creative Venus in your adventurous ninth house, your tastes may run toward the eclectic—or the exotic! Nix plans to meet your friends at your usual brunch place and suggest something very out-of-left-field, like a food truck rally (perhaps at a craft beer venue also hosting an arts fair).','Your greatest turn-on this Saturday won’t involve the usual bells and whistles, Pisces. With the emo moon aligned with sensual Venus in your inquisitive third house, you’ll be a sucker for a quick wit, intellectual banter and a very curious mind')");
+        p1.execSQL("insert into respuestas values('libra','“Casual” won’t cut it for you on Saturday, Libra—not with your ruler, amorous Venus, aligned with the emo moon in your eighth house of eroticism and permabonding. In this realm, these planets can churn up some intense (and changing) emotions, so make sure you have a strong sense of trust and connection with whoever you hand that final rose to. ','Un domingo que te servirá para reconsiderar muchas cosas, Libra, pues estamos en la víspera del novilunio de junio y esa conjunción del Sol con la Luna incide fuertemente en tu horóscopo. ')");
+        p1.execSQL("insert into respuestas values('escorpio','Two’s your magic number this weekend as the sensitive moon and Venus align in sensual Taurus and your seventh house of relationships on Saturday. You’re famous for swinging from one extreme to another, Scorpio, but how well has that been working out? Holding people at a safe distance may feel safe—at first—but inevitably it leaves you lonely. ','Este mes, Escorpio se enfrentará a una nueva etapa donde aprenderá cosas nuevas que le ayudarán a seguir avanzando en su carrera y ampliar sus horizontes de trabajo, lo que atraerá para el año mucha prosperidad y éxito profesional y económico.')");
+        p1.execSQL("insert into respuestas values('sagitario','Don’t apologize if you wake on Saturday NOT in the mood to meet the crew for a brunch of bottomless bellinis. With an energizing mashup of the inspired moon and Venus in your sixth house of wellness and service, you could serious about your mind-body health.','Durante este ciclo del novilunio de junio que está a punto de ocurrir deberás tomar importantes resoluciones y por ese motivo no te convienen las precipitaciones –recuerda que tu regente, el planeta Júpiter está retrógrado.')");
+        p1.execSQL("insert into respuestas values('capricornio','Romance reboot! It’s high season for seduction as the emo moon and sensual Venus team up in your passionate fifth house, a celestial event that happens but once a year. Single Caps will have a magnetic glow on Saturday, and you really don’t want to squander this superpower.','Surgirán nuevas y sorprendentes oportunidades profesionales para Capricornio qué le harán avanzar hacia sus sueños más ambiciosos, esto generará sensaciones positivas y de satisfacción en su carrera, para no dejarlas pasar, Capricornio deberá ser decisivo para para afrontar con destreza cualquier reto de su trabajo')");
+        p1.execSQL("insert into respuestas values('acuario','Saturday’s cozy coupling of the most sensitive planets, the moon and Venus, in your domestic fourth house could spark some soulful conversations and possibly some sexy confessions. Regardless of your relationship status, you’ll be in the mood to share from your heart with one special connection.','A pesar de que pueden adaptarse fácilmente a la energía que los rodea, Acuario tiene una profunda necesidad de tener tiempo a solas y alejarse de todo para recargar energías. Las personas nacidas bajo este signo ven al mundo como un lugar lleno de posibilidades.')");
+        p1.execSQL("insert into respuestas values('piscis','Your greatest turn-on this Saturday won’t involve the usual bells and whistles, Pisces. With the emo moon aligned with sensual Venus in your inquisitive third house, you’ll be a sucker for a quick wit, intellectual banter and a very curious mind','No descartes tu habilidad para ser extremadamente ingeniosa cuando lo necesitas. Si no tienes todo lo que necesitas o toda la información requerida tómate tu tiempo para pensar. ¿A quién conoces? ¿Qué lugares se encuentran a tu alcance? ¿Quién puede llegar a saber dónde encontrar lo que necesitas? En vez de entrar en pánico porque las soluciones no están todas allí, realiza una lista con tus contactos y ve tras ellos.')");
+
+
+
+
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+}
+

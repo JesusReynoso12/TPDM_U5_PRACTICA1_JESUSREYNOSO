@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Ingresa tú número de teléfono"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="phone"
+        android:id="@+id/telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false" />
+
+    <TextView
+        android:text="Ingresa el mensaje con el siguiente formato:\nSIGNO tu signo(minusculas sin espacios),idioma(es,en)"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:singleLine="false" />
+    <Button
+        android:onClick="enviar_mensaje"
+        android:text="Enviar mensajes para recivir tu horoscopo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="#4f084900"
+        android:id="@+id/respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
